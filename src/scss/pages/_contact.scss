@@ -1,0 +1,25 @@
+.s-form--contact{
+    padding:150px 0 200px;
+
+    .wrap{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+
+        .left{
+            flex-grow: 1;
+        }
+
+        .right{
+            width: 100%;
+            max-width: 800px;
+
+            form{
+                width: 100%;
+                padding: 70px 90px;
+                background: $green-light;
+                border-radius: 0 150px 0 150px;
+            }
+        }
+    }
+}

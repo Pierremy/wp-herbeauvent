@@ -1,0 +1,35 @@
+{% extends 'base.twig' %}
+{% block content %}
+
+<div class="view" data-namespace="front-page">
+    <main class="{{ body_class }}">
+
+      <section class="home-news grid">
+        <div class="container">
+          {#<div class="news-bloc">
+            Actus
+          </div>#}
+        </div>
+      </section>
+
+      <section class="home-about grid">
+        <div class="container">
+          <h1>Herbe au Vent</h1>
+          <div class="wrapper">
+            <div class="img-wrap">
+              <img src="{{ site.theme.uri ~ '/images/virigine-small.png' }}" alt="">
+            </div>
+            <div class="about-content">
+              <p>Je fais le rêve d'une planète-Jardin où la science rencontre la tradition, où chaque être vivant vit en parfaite harmonie, éveillé et conscient.<br><br>Nous sommes des êtres spirituels, faisant l'expérience d'une vie terrestre, rélié à la terre et au ciel.<br><br>À nous d'être conscient et de nous rappeler qui nous sommes. La terre et sa médecine nous guide vers notre propre connaissance et sagesse :</p>
+              <span class="handw">
+                Les plantes
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+        
+    </main>
+</div>
+
+{% endblock %}

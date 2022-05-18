@@ -1,0 +1,64 @@
+//Boutique
+.shop{
+    &-head{
+        h1{
+
+        }
+
+        .categories{
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 50px;
+
+            .cat-item{
+
+            }
+        }
+    }
+
+    &-listing{
+        .cat-listing{
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 50px;
+        }
+    }
+}
+
+//Catégories
+.cat{
+    &-head{
+
+    }
+
+    &-listing{
+        .container{
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 50px;
+        }
+    }
+}
+
+//Produit
+.prod{
+    &-main{
+        .product_title.entry-title, .product_meta{
+            display: none;
+        }
+
+        .container{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            .prod-img{
+                max-width: 500px;
+            }
+
+            .prod-desc{
+                max-width: 600px;
+            }
+        }
+    }
+}

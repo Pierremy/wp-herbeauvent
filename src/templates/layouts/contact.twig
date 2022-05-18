@@ -1,0 +1,84 @@
+{% extends 'base.twig' %}
+{% block content %}
+
+<div class="view" data-namespace="contact">
+    <main class="{{ body_class }}">
+
+        <section class="s-form s-form--contact grid">
+            <div class="container wrap">
+                <div class="left">
+                    <h2>Contact</h2>
+                </div>
+                <div class="right">
+                    <form class="form form--contact js-form" data-action="handle_form_contact" novalidate>
+                        <div class="form__wrapper">
+                            {# Optional #}
+                            <div class="form-status">
+                                <div class="icons">
+                                    <svg class="icn__error" xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
+                                        <circle cx="22.5" cy="22.5" r="22.5" fill="#e35757" />
+                                        <path d="M16,32.2l8.1-8.1L32.2,16" transform="translate(-1.6 -1.6)" fill="none" stroke="#fff"
+                                            stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
+                                        <path d="M16,16l8.1,8.1,8.1,8.1" transform="translate(-1.6 -1.6)" fill="none" stroke="#fff"
+                                            stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" />
+                                    </svg>
+                                    <svg class="icn__success" xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
+                                        <circle cx="22.5" cy="22.5" r="22.5" fill="#25ae88" />
+                                        <path d="M35.4,15,21,31.2,12,24" transform="translate(-1.2 -1.5)" fill="none" stroke="#fff"
+                                            stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" />
+                                    </svg>
+                                    <div class="form-status__spinner">
+                                        <div></div>
+                                    </div>
+                                </div>
+                                <span class="form-status__message">Envoi des informations saisie</span>
+                            </div>
+                            {##}
+                            
+                            {# Optional #}
+                            <div class="form-sent-message">
+                                <h3>Votre message a bien été envoyé</h3>
+                                <p>Nous reviendrons vers vous dans les plus brefs délais.</p>
+                                <a href="{{ site.link ~ '/' }}" title="Accueil" class="btn btn--primary"><span>Retour à la page d'accueil</span></a>
+                            </div>
+                            {##}
+        
+                            <div class="form__fields">
+                                <div class="form__row js-form-row">
+                                    <label for="lastname">Nom <span class="tag tag--orange">*</span></label>
+                                    <input id="lastname" name="contact[lastname]" type="text" data-required>
+                                </div>
+                                <div class="form__row js-form-row">
+                                    <label for="firstname">Prénom <span class="tag tag--orange">*</span></label>
+                                    <input id="firstname" name="contact[firstname]" type="text" data-required>
+                                </div>
+                                <div class="form__row js-form-row">
+                                    <label for="email">E-mail <span class="tag tag--orange">*</span></label>
+                                    <input id="email" name="contact[email]" type="email" data-required>
+                                </div>
+                    
+                                <div class="form__row js-form-row">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" name="contact[message]" cols="30" rows="6" data-required></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form__buttons">
+                            <button class="btn btn--primary" type="submit"><span>Envoyer</span></button>
+                        </div>
+                        {# Optional #}
+                        <div class="response-message"></div>
+                        {##}
+                    </form>
+                </div>
+            </div>
+
+
+            
+
+        </section>
+
+    </main>
+</div>
+
+{% endblock content %}

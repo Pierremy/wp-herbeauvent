@@ -1,0 +1,141 @@
+.voyage{
+    &-entry{
+        margin-top: 20px;
+        margin-bottom: 140px;
+        position: relative;
+
+        &:before{
+            content:"";
+            background: $yellow;
+            height: 300px;
+            width: calc(100% - 100px);
+            position: absolute;
+            bottom: -60px;
+            left: 0;
+            border-radius: 0 0 100px 0;
+        }
+
+        .container{
+            position: relative;
+        }
+
+        h1{
+            position: absolute;
+            top: 50px;
+            right: 0;
+            z-index: 5;
+        }
+
+        .img-wrap{
+            position: relative;
+            max-width: 1300px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+        }
+
+        .citation{
+            position: absolute;
+            top: 120px;
+            left: 100px;
+            text-align: center;
+        }
+    }
+
+    &-content{
+
+        .green{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 80px;
+            //flex-wrap: wrap;
+
+            .left{
+                flex-shrink: 1;
+                max-width: 580px;
+                margin-right: 40px;
+                text-align: center;
+            }
+
+            .right{
+                flex-shrink: 1;
+                .bloc{
+                    background: $green-light;
+                    padding: 50px;
+                    border-radius: 50px;
+                    max-width: 900px;
+                    
+                    p{
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
+        .yellow{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 80px;
+
+            .left{
+                .bloc{
+                    background: $yellow;
+                    border-radius: 50px;
+                    padding: 50px;
+                    
+                    p{
+                        color: #fff;
+                    }
+                }
+            }
+
+            .right{
+                text-align: center;
+                margin-left: 40px;
+            }
+        }
+
+        .bottom{
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .rdv{
+            margin-bottom: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+
+            .left{
+                margin-right: 40px;
+            }
+
+            .right{
+                position: relative;
+                flex-basis: 100%;
+                padding: 100px 150px;
+                max-width: 600px;
+
+                .wrap{
+                    position: relative;
+                    z-index: 2;
+                    text-align: center;
+                }
+
+                &:after{
+                    content:"";
+                    background: $green-light;
+                    height: 100%;
+                    width:calc(100% + 7.5vw);
+                    position: absolute;
+                    bottom: 0;
+                    right: -7.5vw;
+                    border-radius: 0 0 0 80px;
+                }
+            }
+        }
+    }
+}

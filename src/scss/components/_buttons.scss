@@ -1,0 +1,46 @@
+.btn {
+    border: none;
+    height: 60px;
+    border-radius: 30px;
+    cursor: pointer;
+    padding: 0 60px;
+
+    &--primary{
+        background: $green;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span{
+            color: #fff;
+        }
+    }
+
+    &--secondary{
+        background: $brown;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span{
+            color: #fff;
+        }
+    }
+
+    &--yellow{
+        background: $yellow;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span{
+            color: #fff;
+        }
+    }
+
+    span{
+        font-size: 28px;
+    }
+}

@@ -1,0 +1,57 @@
+{% extends 'base.twig' %}
+{% block content %}
+
+<div class="view" data-namespace="boutique">
+    <main class="{{ body_class }}">
+
+        <section class="shop-head grid">
+            <div class="container">
+                <h1>La boutique</h1>
+                <div class="categories">
+                    {% for cat in categories %}
+                        <a href="{{ cat.permalink }}" class="cat-item">
+                            <div class="img-wrap">
+                                <img src="{{ cat.thumbnail }}" alt="{{ cat.name }}">
+                            </div>
+                            <h2>{{ cat.name }}</h2>
+                        </a>
+                    {% endfor %}
+                </div>
+            </div>
+            
+            {#{ dump(categories) }#}
+
+            
+
+        </section>
+
+        <section class="shop-listing grid">
+            <div class="container">
+                {% for cat in categories %}
+                    <div class="cat">
+                        <h2>{{ cat.name }}</h2>
+                        <div class="cat-listing">
+                            {% for prod in cat.products %}
+                                <a class="prod-item" href="{{ prod.permalink }}">
+                                    <div class="img-wrap">
+                                        <img src="{{ prod.thumbnail }}" alt="{{ prod.post_title }}">
+                                    </div>
+                                    <div class="prod-meta">
+                                        <h3>{{ prod.post_title }}</h3>
+                                        <div class="addToCart">
+                                            (+)
+                                        </div>
+                                    </div>
+                                    
+                                </a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {#{ dump(cat.products) }#}
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+</div>
+
+{% endblock content %}

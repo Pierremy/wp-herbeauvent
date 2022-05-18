@@ -1,0 +1,56 @@
+{% extends 'base.twig' %}
+{% block content %}
+
+<div class="view" data-namespace="commander">
+    <main class="{{ body_class }} t--craft-fixed">
+
+        <section class="commander grid">
+
+            <div class="container">
+
+                    <div class="col-xs-24 title_row">
+                        {{ breadcrumb|notags }}
+
+                        <h1>Ma commande</h1>
+                    </div>
+      
+            </div>
+
+            {#<div class="container">
+         
+                    <div class="col-xs-24 nav">
+                        <div class="header">
+                            Étapes de commande :
+                        </div>
+
+                        <div class="nav_element first">
+                            <button class="step_one_button active">
+                                Étape 1 : Informations personnelles
+                            </button>
+                        </div>
+
+                        <div class="nav_element">
+                            <button class="step_two_button">
+                                Étape 2 : Récapitulatif de la commande & paiement
+                            </button>
+                        </div>
+                    </div>
+
+            </div>#}
+
+            <div class="container">
+        
+                    <div class="col-xs-24 content_row">
+                        {{page.content}}
+                        <button class="btn btn--secondary next_step step_two_button"><span>Procéder au paiement</span></button>
+                    </div>
+     
+            </div>
+
+
+        </section>
+
+    </main>
+</div>
+
+{% endblock %}

@@ -1,0 +1,107 @@
+.site-header {
+    .head-wrap{
+        display: grid;
+        grid-auto-columns: 1fr; 
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-template-rows: 1fr; 
+        gap: 0px 0px; 
+        grid-template-areas: "left logo user";
+        justify-content: space-between;
+        align-items: center;
+        background: url('#{$path-images}/bg_plantes.svg');
+        background-size: cover;
+
+        .logotype{
+            grid-area: logo;
+            padding: 38px;
+            text-align: center;
+
+            img{
+                background: #fffc;
+                max-width: 350px;
+            }
+        }
+
+        .user{
+            grid-area: user;
+            display:flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            .nav-user{
+                background: #fffc;
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                max-width: 210px;
+                padding: 10px 0;
+                
+                li{
+                    a{
+                        display: flex;
+                        margin: 0;
+                        align-items: center;
+                        justify-content:center;
+                        padding: 3px 0;
+
+                        span{
+                            text-transform: uppercase;
+                            font-weight: 500;
+                            letter-spacing: -.8px;
+                            font-size: 15px;
+                        }
+
+                        img{
+                            max-width: 25px;
+                            max-height: 30px;
+                            margin-left: 10px;
+                        }
+                    }
+
+                    &:nth-child(2){
+                        a{
+                            img{
+                                margin-left: 0;
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+
+    .nav-wrap{
+        display: flex;
+        justify-content: center;
+        //background: #fff;
+        padding: 10px 7.5vw;
+        border-bottom: 1px solid #ddd;
+
+        .nav-primary{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 1500px;
+    
+            li{
+                max-width: 150px;
+
+                a{
+                    display: block;
+                    text-transform: uppercase;
+                    padding: 15px 10px;
+                    text-align: center;
+
+                    &:hover, &.active{
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+    
+}

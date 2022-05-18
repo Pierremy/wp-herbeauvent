@@ -1,0 +1,37 @@
+		</div> {# -- Close site-container tag -- #}
+		<footer class="site-footer grid">
+			<div class="container wrap">
+				<div class="left">
+					<h3 class="handw">Herbe au Vent</h3>
+					<p class="handw">Production, cueillette et transformation de plantes medicinales biologiques.<br>Virginie Daniaud, Paysanne Herboriste</p>
+				</div>
+				<div class="right">
+					<div class="logos">
+						<img src="{{ site.theme.uri ~ '/images/reseau.png' }}" alt="">
+						<img src="{{ site.theme.uri ~ '/images/feuille-etoiles.png' }}" alt="">
+						<img src="{{ site.theme.uri ~ '/images/logo-ab.png' }}" alt="">
+					</div>
+				</div>
+			</div>
+		</footer>
+	
+		<!-- JS -->
+		<script>
+			window.APP = window.APP || {}
+			APP.BASE_URL = "{{ site.url }}"
+			APP.BASE_URL_RELATIVE = "{{ site.url|relative }}"
+			APP.THEME_URL = "{{ site.theme.uri }}"
+			APP.AJAX_URL = "{{ fn('admin_url', 'admin-ajax.php') }}"
+		</script>
+
+		{% if options.analytics.ga is defined and options.analytics.ga is not empty %}
+			<script src="https://www.googletagmanager.com/gtag/js?id={{ options.analytics.ga }}" async defer></script>
+			<script>window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', '{{ options.analytics.ga }}');</script>
+		{% endif %}
+
+		<script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?flags=gated&features=es2015,blissfuljs,IntersectionObserver"></script>
+	
+		{{ wp_footer }}
+
+	</body>
+</html>

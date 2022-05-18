@@ -1,0 +1,147 @@
+.yoga{
+    &-head{
+        h1{
+
+        }
+
+        .wrap{
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 450px);
+            gap: 80px;
+
+
+            .left{
+                text-align: center;
+            }
+    
+            .right{
+                text-align: center;
+            }
+        }
+        
+    }
+
+    &-about{
+        .top{
+            position: relative;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 450px);
+            gap: 80px;
+            margin-top: 100px;
+            margin-bottom: -100px;
+
+            &:before{
+                content:"";
+                background: $green-light;
+                width: calc(100% + 7.5vw);
+                height: 300px;
+                border-radius: 0 0 0 100px;
+                position: absolute;
+                top: 60px;
+                left: 0;
+            }
+
+            .left{
+                position: relative;
+                z-index: 2;
+                
+                .content{
+                    background: #fff;
+                    box-shadow: -2px 2px 20px rgba(0,0,0, .15);
+                    padding: 50px;
+                    margin-left: 80px;
+                }
+            }
+
+            .right{
+                position: relative;
+                z-index: 2;
+                margin-top: 120px;
+
+                .content{
+                    background: #fff;
+                    box-shadow: -2px 2px 20px rgba(0,0,0, .15);
+                    padding: 50px;
+                }
+            }
+        }
+
+        .bot{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr; 
+            grid-template-rows: 1fr 1fr 1fr; 
+            gap: 0px 4vw; 
+            grid-template-areas: 
+                "one two ."
+                "one two three"
+                "one two three"; 
+            
+            margin: 0 100px;
+            
+            .one { 
+                grid-area: one;
+                background: url('#{$path-images}/icons/icon_yoga_1.svg');
+                background-size: cover;
+                padding-bottom: 184%;
+            }
+
+            .two {
+                grid-area: two;
+                background: url('#{$path-images}/icons/icon_yoga_2.svg');
+                background-size: cover;
+                padding-bottom: 184%;
+            }
+
+            .three {
+                grid-area: three;
+                background: url('#{$path-images}/icons/icon_yoga_3.svg');
+                background-size: cover;
+                padding-bottom: 122.5%;
+            }
+
+            .desc{
+                height: 0;
+                position: relative;
+                border-radius: 50px;
+                overflow: hidden;
+                background-color: #eee;
+                box-shadow: -2px 2px 20px rgba(0,0,0, .15);
+
+                
+                .content{
+                    position: absolute;
+                    top: 50%;
+                    left: 50px;
+                    width: calc(100% - 100px);
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+
+    &-contact{
+        margin: 150px 0;
+
+        .content{
+            position: relative;
+            max-width: fit-content;
+            padding: 50px 150px;
+
+            p, a{
+                position: relative;
+                z-index: 2;
+            }
+
+            &:before{
+                content:"";
+                background: $yellow;
+                width: calc(100% + 7.5vw);
+                height: 100%;
+                border-radius: 0 0 100px 0;
+                position: absolute;
+                top: 0;
+                left: -7.5vw;
+            }
+        }
+    }
+}

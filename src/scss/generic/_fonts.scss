@@ -1,0 +1,55 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Roboto';
+    font-style:   normal;
+    font-weight:  300;
+    src: url('#{$path-fonts}/Roboto-Light.ttf') format('truetype'),
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Roboto';
+    font-style:   normal;
+    font-weight:  400;
+    src: url('#{$path-fonts}/Roboto-Regular.ttf') format('truetype'),
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Roboto';
+    font-style:   normal;
+    font-weight:  600;
+    src: url('#{$path-fonts}/Roboto-Bold.ttf') format('truetype'),
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Roboto';
+    font-style:   normal;
+    font-weight:  700;
+    src: url('#{$path-fonts}/Roboto-Black.ttf') format('truetype'),
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'MyriadPro';
+    font-style:   normal;
+    font-weight:  400;
+    src: url('#{$path-fonts}/Roboto-Light.ttf') format('truetype'),
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'ArrangeSignature';
+    font-style:   normal;
+    font-weight:  400;
+    src: url('#{$path-fonts}/aArrangeSignature.otf') format('opentype'),
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'ArtichtectsDaughter';
+    font-style:   normal;
+    font-weight:  400;
+    src: url('#{$path-fonts}/ArchitectsDaughter-Regular.ttf') format('truetype'),
+}

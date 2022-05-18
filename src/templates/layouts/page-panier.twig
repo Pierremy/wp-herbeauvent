@@ -1,0 +1,33 @@
+{% extends 'base.twig' %}
+{% block content %}
+
+<div class="view" data-namespace="panier">
+	<main class="{{ body_class }}">
+
+		<section class="cart-content grid">
+			<div class="container">
+
+					<div class="title_row">
+						{{ breadcrumb|notags }}
+						
+						<h1>Mon panier</h1>
+						
+						{#<a href="{{site.url ~ '/commander'}}" class="btn btn--secondary no-barba">
+							<span>Passer commande</span>
+						</a>#}
+					</div>
+
+			</div>
+
+			<div class="container">
+
+					<div class="content_row">
+						{{page.content}}
+					</div>
+			
+			</div>
+		</section>
+	</main>
+</div>
+
+{% endblock %}

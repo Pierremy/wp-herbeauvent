@@ -1,0 +1,36 @@
+{% extends 'base.twig' %}
+{% block content %}
+
+<div class="view" data-namespace="prod-category">
+    <main class="{{ body_class }}">
+
+        <section class="cat-head grid">
+            <div class="container">
+                <h1>{{ category.name }}</h1>
+                {{ category.description }}
+            </div>
+        </section>
+
+        <section class="cat-listing grid">
+            <div class="container">
+                {% for prod in products %}
+                    <a class="prod-item" href="{{ prod.permalink }}">
+                        <div class="img-wrap">
+                            <img src="{{ prod.thumbnail }}" alt="{{ prod.post_title }}">
+                        </div>
+                        <div class="prod-meta">
+                            <h3>{{ prod.post_title }}</h3>
+                            <div class="addToCart">
+                                (+)
+                            </div>
+                        </div>
+                        
+                    </a>
+                {% endfor %}
+            </div>
+        </section>
+
+    </main>
+</div>
+
+{% endblock content %}

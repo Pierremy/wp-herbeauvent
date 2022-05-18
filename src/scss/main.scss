@@ -1,0 +1,41 @@
+/*!
+Author: Wesign Communication
+Author URI: http://www.wesign.fr/
+*/
+
+// Settings
+@import 'settings/variables';
+@import 'settings/media';
+
+// Generic
+@import 'generic/normalize';
+@import 'generic/fonts';
+@import 'generic/base';
+@import 'generic/grid';
+@import 'generic/typographie';
+@import 'generic/spacing';
+
+// Objects
+@import 'objects/keyframes';
+
+// Pages
+@import 'pages/home';
+@import 'pages/boutique';
+@import 'pages/contact';
+@import 'pages/yoga';
+@import 'pages/stages';
+@import 'pages/voyage';
+@import 'pages/404';
+
+// Components
+@import 'components/buttons';
+@import 'components/footer';
+@import 'components/forms';
+@import 'components/header';
+@import 'components/layouts';
+@import 'components/navigation';
+@import 'components/preloader';
+
+// Vendors
+// @import '~lightpick/css/lightpick';
+// @import 'vendor/your-lib-name.scss';

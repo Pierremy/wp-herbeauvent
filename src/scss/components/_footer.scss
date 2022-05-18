@@ -1,0 +1,41 @@
+.site-footer {
+    background: url('#{$path-images}/bg_plantes.svg');
+    background-size: cover;
+    padding: 75px 0;
+
+    .wrap{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .left, .right{
+            background: rgba(255, 255, 255, 0.8);
+            padding: 50px;
+        }
+
+        .left{
+            h2{
+                font-size: 30px;
+            }
+
+            p{
+                font-size: 18px;
+            }
+        }
+
+        .right{
+            .logos{
+                display: flex;
+                align-items: center;
+
+                img{
+
+
+                    &:nth-child(2){
+                        margin: 0 30px;
+                    }
+                }
+            }
+        }
+    }
+}

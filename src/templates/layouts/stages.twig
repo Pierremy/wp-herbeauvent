@@ -1,0 +1,32 @@
+{% extends 'base.twig' %}
+{% block content %}
+
+{% set content = page.get_field('content') %}
+
+<div class="view" data-namespace="stages">
+	<main class="{{ body_class }}">
+
+        <section class="stages-listing grid">
+			{% set datas = content.list %}
+			<div class="container">
+				<div class="listing">
+					{% for item in datas %}
+						<div class="stage-item">
+							<div class="wrap">
+								<h3>{{ item.nom }}</h3>
+								<p class="date">{{ item.date }}</p>
+							</div>
+							<div class="desc">
+								<p>{{ item.desc }}</p>
+								<a href="{{ site.url ~ '/contact/' }}" class="btn btn--yellow"><span>S'inscrire</span></a>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</section>
+
+	</main>
+</div>
+
+{% endblock %}

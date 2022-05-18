@@ -1,0 +1,32 @@
+{% extends 'base.twig' %}
+{% block content %}
+
+<div class="view" data-namespace="single-product">
+    <main class="{{ body_class }}">
+
+        <section class="prod-main grid">
+            <div class="container">
+                <div class="prod-img">
+                    <div class="img-wrap">
+                        <img src="{{ product.thumbnail }}" alt="{{ post.post_title }}">
+                    </div>
+                </div>
+                <div class="prod-desc">
+                    
+                    <h1>{{ post.post_title }}</h1>
+                    {{ post.post_content }}
+
+                    <div class="prod-cart">
+                        {% do action('woocommerce_single_product_summary') %}
+                        {% do action('woocommerce_after_single_product') %}
+                    </div>
+                </div>
+
+                
+            </div>
+        </section>
+
+    </main>
+</div>
+
+{% endblock content %}

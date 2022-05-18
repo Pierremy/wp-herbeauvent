@@ -1,0 +1,77 @@
+{% extends 'base.twig' %}
+{% block content %}
+
+{% set content = page.get_field('content') %}
+
+<div class="view" data-namespace="voyages">
+	<main class="{{ body_class }}">
+
+		<section class="voyage-entry grid">
+			{% set datas = content.entry %}
+
+			<div class="container">
+				<h1>{{ page.post_title }}</h1>
+				<div class="img-wrap">
+					<img src="{{ datas.image.url }}" alt="{{ datas.image.alt }}">
+					<div class="citation">
+						{{ datas.citation }}
+						<span class="handw">{{ datas.auteur }}</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="voyage-content grid">
+			<div class="container">
+
+
+				<div class="green">
+					{% set datas = content.bloc_vert %}
+					<div class="left">
+						{{ datas.citation }}
+					</div>
+					<div class="right">
+						<div class="bloc">
+							{{ datas.contenu_bloc }}
+						</div>
+					</div>
+				</div>
+
+				<div class="yellow">
+					{% set datas = content.bloc_jaune %}
+					<div class="left">
+						<div class="bloc">
+							{{ datas.contenu_bloc }}
+						</div>
+					</div>
+					<div class="right">
+						{{ datas.citation }}
+					</div>
+				</div>
+
+				<div class="bottom">
+					{% set datas = content.content_bottom %}
+					{{ datas }}
+				</div>
+
+				<div class="rdv">
+					{% set datas = content.section_rdv %}
+					<div class="left">
+						{{ datas.citation }}
+					</div>
+					<div class="right">
+						<div class="wrap">
+							{{ datas.contenu_prise_rdv }}
+							<a href="{{ site.url ~ '/contact/' }}" class="btn btn--primary"><span>Prendre RDV</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+        
+
+	</main>
+</div>
+
+{% endblock %}

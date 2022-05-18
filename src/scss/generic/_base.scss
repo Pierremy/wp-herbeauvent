@@ -1,0 +1,107 @@
+* {
+    box-sizing:                  border-box;
+    -moz-font-feature-settings:  'liga' on;
+    -webkit-font-smoothing:      antialiased;
+    -moz-osx-font-smoothing:     grayscale;
+    margin:                      0;
+    padding:                     0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    text-rendering:              optimizeLegibility;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+body {
+    color:       $color-primary;
+    font-family: $font-secondary;
+    font-size:   1em;
+    background: #eee;
+
+    //Specifiy header height
+    //for view's padding if needed
+    /*--topbar-height: 80px;
+	@include min(md){
+		--topbar-height: 94px;
+	}
+	@include min(xl){
+		--topbar-height: 130px;
+	}
+	@include min(xxl){
+		--topbar-height: 149px;
+	}*/
+}
+
+/*.view{
+    padding-top: var(--topbar-height);
+}*/
+
+::selection {
+    background-color: $color-primary;
+    color:            white;
+}
+
+ul {
+    list-style: none;
+    margin:     0;
+    padding:    0;
+}
+
+p,
+span,
+a,
+li {
+    color:       $color-primary;
+    font-size:   1rem;
+    line-height: 1.33;
+}
+
+button {
+    font-family: $font-secondary;
+}
+
+a {
+    color:           $color-primary;
+    text-decoration: none;
+}
+
+#app{
+    position: relative;
+    z-index: 2;
+
+    .view{
+        main{
+            background: url('#{$path-images}/icons/plantes_bg1.svg');
+            background-size: cover;
+            background-position: bottom right;
+        }
+    }
+}
+.dev-imgs{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    overflow: visible;
+    opacity: .4;
+    pointer-events: none;
+    z-index: 0;
+
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+.img-wrap{
+    position: relative;
+
+    img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}

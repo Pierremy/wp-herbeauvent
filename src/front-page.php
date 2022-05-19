@@ -1,5 +1,10 @@
 <?php
 
+/*
+* Template Name: Accueil Template
+*/
+
+
 $context = Timber::get_context();
 $page = new Timber\Post();
 

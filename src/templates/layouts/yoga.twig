@@ -4,77 +4,52 @@
 <div class="view" data-namespace="yoga">
 	<main class="{{ body_class }}">
 
+        {% set content = page.get_field('content_yoga') %}
+
         <section class="yoga-head grid">
+            {% set datas = content.entry %}
             <div class="container">
                 <h1>{{ page.post_title }}</h1>
                 <div class="wrap">
                     <div class="left">
-                        <p>« Maître du souffle, Maître de l'instant présent »<br><span class="handw">Inspirer Expirer Inspirer</span></p>
+                        {{ datas.text_left|tagtohtml }}
                     </div>
                     <div class="right">
-                        <p>« Avant que n'existe le temps,<br> Avant que n'existe l'espace,<br> Les enseignements du Yoga existaient déjà »<br><span class="handw">Alberto Villada, Patanjali le Chaman</span></p>
+                        {{ datas.text_right|tagtohtml }}
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="yoga-about grid">
+            {% set datas = content.about %}
             <div class="container">
                 <div class="top">
                     <div class="left">
                         <div class="content">
-                            <p class="handw">
-                                Qu'est-ce que le Yoga ?
-                            </p>
-                            <p>
-                                Dans l'inde d'un passé qui se perd dans la nuit des temps, les gens étudient les secrets de l'âme humaine et beaucoup ont consacré leur vie entière à cette recherche, afin de découvrir ce qu'est l'Homme et quel est son destin sur terre.<br> Ils se sont éloignés de l'agitation du monde pour concentrer leurs pensées et leur intention sur l'unique question :
-                            </p>
-                            <p class="handw">
-                                Qui suis-je ?
-                            </p>
+                            {{ datas.text_left|tagtohtml }}
                         </div>
                     </div>
                     <div class="right">
                         <div class="content">
-                            <p class="handw">Origines</p>
-                            <p>Toutes les formes de yoga ontt la même essence et le même but. Le yoga nous enseigne la maitrise de soi. Il nous enseigne l'Equilibre, l'Harmonie et l'Amour. Il nous apprend à Unir (traduction littérale en Sanskrit du mot YOGA), le corps et l'esprit, à Unir nos énergies masculines (yang) et féminines (yin), à harmoniser nos centres énergétiques, à équilibrer nos différents corps (physique, émotionnel et mental), à équilibrer l'extérieur et l'intérieur. Il nous guide vers une meilleure connaissance de soi. C'est l'union de la conscience individuelle et de la conscience universelle (la force vitale qui emplit chaque être vivant).</p>
+                            {{ datas.text_right|tagtohtml }}
                         </div>
                     </div>
                 </div>
                 <div class="bot">
                     <div class="desc one">
                         <div class="content">
-                            <h3>Le Yoga c'est :</h3>
-                            <h4>Une intention pure :</h4>
-                            <p class="handw">Le sankpala</p>
-                            <h4>Une attitude ou disposition intérieure :</h4>
-                            <p class="handw">Le Bhava</p>
-                            <h4>Des postures :</h4>
-                            <p class="handw">Les Asanas</p>
-                            <h4>Le souffle :</h4>
-                            <p class="handw">Le Pranayama</p>
+                            {{ datas.bloc_1|tagtohtml }}
                         </div>
                     </div>
                     <div class="desc two">
                         <div class="content">
-                            <h3>C'est aussi un voyage intérieur :</h3>
-                            <h4>Les archétypes :</h4>
-                            <p class="handw">Purvaya</p>
-                            <h4>Les centres énergétiques :</h4>
-                            <p class="handw">Chakras</p>
-                            <h4>La concentration :</h4>
-                            <p class="handw">Pharana</p>
-                            <h4>Les verrous & sceaux :</h4>
-                            <p class="handw">Bandha & Mudra</p>
+                            {{ datas.bloc_2|tagtohtml }}
                         </div>
                     </div>
                     <div class="desc three">
                         <div class="content">
-                            <h3>& l'exploration de soi :</h3>
-                            <h4>Les blocaques psychologiques :</h4>
-                            <p class="handw">Klesa</p>
-                            <h4>La transformation émotionnelle :</h4>
-                            <p class="handw">Bhavana</p>
+                            {{ datas.bloc_3|tagtohtml }}
                         </div>
                     </div>
                 </div>
@@ -82,10 +57,11 @@
         </section>
 
         <section class="yoga-contact grid">
+            {% set datas = content.contact %}
             <div class="container">
                 <div class="content">
-                    <p>Inscription par téléphone au 06 02 66 06 31<br> Tarifs: 7 euros par séance<br>(possibilité de payer en plusieurs fois)<br>Possibilité d'intégrer le cours tout au long de l'année</p>
-                    <a class="btn btn--secondary" href="{{ site.url ~ '/contact/' }}"><span>S'inscrire</span></a>
+                    {{ datas.text|tagtohtml }}
+                    <a class="btn btn--secondary" href="{{ datas.link.url }}"><span>{{ datas.link.title }}</span></a>
                 </div>
             </div>
         </section>

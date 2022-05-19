@@ -14,9 +14,9 @@
     .preloader__logotype {
         opacity:   0;
         transform: scale(0.85);
-        width: 	   120px;
+        width: 	   200px;
 
-        @include min(sm) { width: 180px }
-        @include min(md) { width: 220px }
+        @include min(sm) { width: 220px }
+        @include min(md) { width: 240px }
     }
 }

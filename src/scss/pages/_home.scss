@@ -68,6 +68,11 @@
                     font-size: 18px;
                     font-weight: 500;
                     line-height: 1.2;
+                    margin-bottom: 30px;
+
+                    &:last-of-type{
+                        margin-bottom: 0;
+                    }
                 }
 
                 .handw{

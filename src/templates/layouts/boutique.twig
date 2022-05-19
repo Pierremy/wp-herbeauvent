@@ -6,23 +6,19 @@
 
         <section class="shop-head grid">
             <div class="container">
-                <h1>La boutique</h1>
+                <h1>L'Herboristerie Bio</h1>
                 <div class="categories">
                     {% for cat in categories %}
                         <a href="{{ cat.permalink }}" class="cat-item">
                             <div class="img-wrap">
                                 <img src="{{ cat.thumbnail }}" alt="{{ cat.name }}">
                             </div>
-                            <h2>{{ cat.name }}</h2>
+                            <h2>{{ 'Les ' ~  cat.name }}</h2>
                         </a>
                     {% endfor %}
                 </div>
             </div>
-            
             {#{ dump(categories) }#}
-
-            
-
         </section>
 
         <section class="shop-listing grid">
@@ -32,18 +28,23 @@
                         <h2>{{ cat.name }}</h2>
                         <div class="cat-listing">
                             {% for prod in cat.products %}
-                                <a class="prod-item" href="{{ prod.permalink }}">
-                                    <div class="img-wrap">
+                                <div class="prod-item">
+                                    <a class="img-wrap" href="{{ prod.permalink }}">
                                         <img src="{{ prod.thumbnail }}" alt="{{ prod.post_title }}">
-                                    </div>
+                                    </a>
                                     <div class="prod-meta">
-                                        <h3>{{ prod.post_title }}</h3>
+                                        <a class="prod-title" href="{{ prod.permalink }}">
+                                            <h3>{{ prod.post_title }}</h3>
+                                            <span>{{ prod.short_desc }}</span>
+                                        </a>
+                                        <div class="prod-price">
+                                            <span>{{ prod._price }}€</span>
+                                        </div>
                                         <div class="addToCart">
-                                            (+)
+                                            Ajouter au panier (+)
                                         </div>
                                     </div>
-                                    
-                                </a>
+                                </div>
                             {% endfor %}
                         </div>
                     </div>

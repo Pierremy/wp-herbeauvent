@@ -13,9 +13,9 @@ h1, h2, h3, h4, h5, h6{
     line-height: 1;
     font-weight: 400;
 
-    strong{
+    /*strong{
         color: $color-secondary;
-    }
+    }*/
 }
 
 .handw{
@@ -24,6 +24,7 @@ h1, h2, h3, h4, h5, h6{
 
 h1{
     @include fluid-typo(30px, 60px, 450px, 992px);
+    font-family: $font-quaternary;
     --margin-bot: 10px;
     margin-bottom: var( --margin-bot);
     @include min(xs) { --margin-bot: 15px}
@@ -36,7 +37,7 @@ h2{
     @include fluid-typo(20px, 38px, 450px, 992px);
     letter-spacing: -1px;
     --margin-bot: 10px;
-    font-family: $font-quaternary;
+    font-family: $font-secondary;
     margin-bottom: var( --margin-bot);
     @include min(xs) { --margin-bot: 12px}
     @include min(sm) { --margin-bot: 14px}

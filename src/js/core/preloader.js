@@ -13,23 +13,26 @@ class Preloader {
     utils.detectPointer()
     utils.detectBrowser()
 
-    this.animateIn()
+    //this.animateIn()
+    this.done()
   }
 
   animateIn = () => {
     gsap.to(this.el.querySelector('img'), {
-      duration: 0.7,
+      duration: 1,
       opacity: 1,
       scale: 1,
+      ease: 'Power2.easeOut',
       onComplete: this.animateOut
     })
   }
 
   animateOut = () => {
     gsap.to(this.el, {
-      duration: 0.6,
+      duration: .8,
       opacity: 0,
-      delay: 0.2,
+      delay: 0.6,
+      ease: 'Power2.easeIn',
       onComplete: this.done
     })
   }

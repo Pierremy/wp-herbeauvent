@@ -291,6 +291,8 @@ class WS_Starter extends TimberSite {
       $twig->addExtension(new Twig\Extension\StringLoaderExtension());
       $twig->addFilter(new TwigFilter('tagtohtml', function($text) {
          $tags = [
+            '<em>' => '<span class="handw">',
+            '</em>' => '</span>',
             '[b]'  => '<strong>',
             '[/b]' => '</strong>',
             '[br]' => '<br/>',

@@ -13,8 +13,8 @@ class Preloader {
     utils.detectPointer()
     utils.detectBrowser()
 
-    //this.animateIn()
-    this.done()
+    this.animateIn()
+    //this.done()
   }
 
   animateIn = () => {

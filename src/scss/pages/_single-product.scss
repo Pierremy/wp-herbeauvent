@@ -1,3 +1,28 @@
 .prod-main{
-    margin: 100px 0;
+    padding: 100px 0;
+
+    .container{
+        .wrap{
+            width: 100%;
+            display: grid;
+            grid-template-columns: minmax(0, 40%) minmax(0, 1fr);
+            gap: 7.5vw;
+
+            .prod-image{
+                .img-wrap{
+                    padding: 20px;
+                    background: rgba(255,255,255,.8);
+
+                    img{
+
+                    }
+                }
+            }
+
+            .prod-description{
+                background: #fff;
+                border-radius: 0 100px 0 100px;
+            }
+        }
+    }
 }

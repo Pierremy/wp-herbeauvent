@@ -6,23 +6,23 @@
 
         <section class="prod-main grid">
             <div class="container">
-                <div class="prod-img">
-                    <div class="img-wrap">
-                        <img src="{{ product.thumbnail }}" alt="{{ post.post_title }}">
+                <div class="wrap">
+                    <div class="prod-image">
+                        <div class="img-wrap">
+                            <img src="{{ product.thumbnail }}" alt="{{ post.post_title }}">
+                        </div>
+                    </div>
+                    <div class="prod-description">
+                        
+                        <h1>{{ post.post_title }}</h1>
+                        <p>{{ post.post_content }}</p>
+    
+                        <div class="prod-cart">
+                            {% do action('woocommerce_single_product_summary') %}
+                            {% do action('woocommerce_after_single_product') %}
+                        </div>
                     </div>
                 </div>
-                <div class="prod-desc">
-                    
-                    <h1>{{ post.post_title }}</h1>
-                    <p>{{ post.post_content }}</p>
-
-                    <div class="prod-cart">
-                        {% do action('woocommerce_single_product_summary') %}
-                        {% do action('woocommerce_after_single_product') %}
-                    </div>
-                </div>
-
-                
             </div>
         </section>
 

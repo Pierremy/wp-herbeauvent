@@ -7,7 +7,7 @@
         <section class="shop-head grid">
             <div class="container">
                 <h1>L'Herboristerie Bio</h1>
-                <div class="categories">
+                <div class="categories size-{{ categories|length }}">
                     {% for cat in categories %}
                         <a href="{{ cat.permalink }}" class="cat-item">
                             <div class="img-wrap">

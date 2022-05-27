@@ -6,7 +6,7 @@
 
       {% set datas = page.get_field('content_home') %}
 
-      <section class="home-news grid">
+      <section class="home-news grid" style="background: url('{{ datas.image_principale.url }}')">
         <div class="container">
           {#<div class="news-bloc">
             Actus

@@ -15,6 +15,16 @@ if ( is_singular( 'product' ) ) {
     $context['product'] = $product;
     $context['page_type'] = 'single-product';
     $product->short_desc = get_field('description_courte_bienfaits', $context['post']->ID);
+    $attributes_data  = $product->get_attributes();
+    $product_attributes = [];
+
+    $poids = $product->get_attribute( 'pa_poids' );
+    $volume = $product->get_attribute( 'pa_volume' );
+
+    $product_attributes['poids'] = $poids;
+    $product_attributes['volume'] = $volume;
+
+    $context['product_attributes'] = $product_attributes;
 
     /*if( $product->is_type( 'simple' ) ){
         $context['product_type'] = 'product-simple';
@@ -76,6 +86,8 @@ if ( is_singular( 'product' ) ) {
         'post_type'      => 'product',
         'post_status'  => 'publish',
         'posts_per_page' => -1,
+        'orderby' => 'title',
+        'order'   => 'ASC',
         'tax_query' => array(
             array(
                 'taxonomy' => 'product_cat',
@@ -114,6 +126,8 @@ if ( is_singular( 'product' ) ) {
             'post_type'      => 'product',
             'post_status'  => 'publish',
             'posts_per_page' => -1,
+            'orderby' => 'title',
+            'order'   => 'ASC',
             'tax_query' => array(
                 array(
                     'taxonomy' => 'product_cat',

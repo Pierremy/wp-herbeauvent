@@ -1,5 +1,5 @@
 //Boutique
-.shop{
+.cat{
     &-head{
         margin-top: 100px;
 
@@ -67,24 +67,9 @@
 
     &-listing{
         margin: 100px 0;
+        .container{
 
-        .cat{
-            margin-top: 100px;
-
-            &:first-of-type{
-                margin-top: 0;
-            }
-            h2{
-                text-transform: uppercase;
-                font-weight: 600;
-                font-size: 26px;
-                border-bottom: 1px solid;
-                padding-bottom: 16px;
-                margin-bottom: 50px;
-            }
-        }
-
-        .cat-listing{
+        
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 50px;
@@ -186,6 +171,7 @@
                 }
             }
         }
+        
     }
 }
 

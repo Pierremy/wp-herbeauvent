@@ -1,7 +1,7 @@
 .home{
     &-news{
-        background: url('#{$path-images}/thes.png');
-        background-size: cover;
+        //background: url('#{$path-images}/thes.png');
+        background-size: cover !important;
         padding: 150px 0;
         min-height: 500px;
 

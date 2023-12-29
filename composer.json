@@ -1,0 +1,54 @@
+{
+    "name": "wesign/wp-starter",
+    "description": "2020 Wordpress theme starter for Wesign",
+    "license": "ISC",
+    "authors": [
+        {
+            "name": "Julien Perros",
+            "email": "julien@wesign.fr"
+        }
+    ],
+    "scripts": {
+        "post-install-cmd": "bash cli/autoloader.sh",
+        "install:prod": "./cli/install-prod.sh"
+    },
+    "autoload": {
+        "psr-4": {
+            "WS_2020\\": "dist/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "advanced-custom-fields/advanced-custom-fields-pro",
+                "version": "5.7.12",
+                "type": "wordpress-muplugin",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://connect.advancedcustomfields.com/index.php?a=download&p=pro&k=b3JkZXJfaWQ9MTczODYzfHR5cGU9ZGV2ZWxvcGVyfGRhdGU9MjAxOS0xMC0yOCAxNDoxNToxNQ=="
+                },
+                "require": {
+                    "composer/installers": "^1.4",
+                    "ffraenz/private-composer-installer": "^2.0"
+                }
+            }
+        }
+    ],
+    "extra": {
+        "installer-paths": {
+            "../../mu-plugins/{$name}/": ["type:wordpress-plugin", "type:wordpress-muplugin", "wpackagist-plugin/*"]
+        }
+    },
+    "require": {
+        "timber/timber": "^1.8",
+        "advanced-custom-fields/advanced-custom-fields-pro": "^5.0.0",
+        "wpackagist-plugin/google-site-kit": "*",
+        "wpackagist-plugin/wordpress-seo": "*",
+        "wpackagist-plugin/simple-custom-post-order": "*"
+    }
+}
